@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Libro de Visitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Libro de Visitas</h1>
+    <div id="registro-section">
+        <h2>Registro de Visitante</h2>
+        <form id="registro-form">
+            <input type="text" id="nombre" placeholder="Nombre completo" required maxlength="100">
+            <input type="email" id="email" placeholder="Correo electrónico" required maxlength="100">
+            <button type="submit">Registrarse</button>
+        </form>
+        <div id="registro-error" class="error"></div>
+    </div>
+    <div id="mensaje-section" style="display:none;">
+        <h2>¡Hola, <span id="visitante-nombre"></span>!</h2>
+        <button id="cerrar-sesion" type="button">Cerrar sesión</button>
+        <form id="mensaje-form">
+            <textarea id="contenido" placeholder="Escribe tu mensaje (máx. 300 caracteres)" maxlength="300" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+        <div id="mensaje-error" class="error"></div>
+    </div>
+    <h2>Mensajes</h2>
+    <table id="tabla-mensajes">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Mensaje</th>
+                <th>Fecha y hora</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="ultimos">
+        <strong>Últimos 5 mensajes:</strong>
+        <ul id="ultimos-lista"></ul>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html> 
